@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="Shift_JIS">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <meta name="description" content="sample text sample text sample text sample text sample text sample text ...">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/common2.css">
+    <link rel="stylesheet" href="./assets/css/res.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="section">
+        <div id="container">
+            <div id="blanding">
+                <img src="./assets/images/brandingband.gif" />
+            </div>
+            <div id="main-wrapper" class="leftside">
+                <div id="side-menu">
+                    <div class="menu-header">
+                      
+                    </div>
+                    <div id="dispMenu" style="display: block;">
+                        
+                        <div class="mizuhomenu">
+                            <div class="OPENBKCOLOR dijitTitlePane" role="group" lang="ja" id="menuTitlePane1" widgetid="menuTitlePane1">
+                                <div  class="dijitTitlePaneTitle dijitFixedOpen" data-dojo-attach-point="titleBarNode">
+                                    <div class="dijitTitlePaneTitleFocus" data-dojo-attach-point="focusNode" role="heading" aria-pressed="true">
+                                        <!--
+                                        <img src="dojo/dojo/resources/blank.gif" alt="" data-dojo-attach-point="arrowNode" class="dijitArrowNode" role="presentation"><span data-dojo-attach-point="arrowNodeInner" class="dijitArrowNodeInner">-</span><span data-dojo-attach-point="titleNode" class="dijitTitlePaneTextNode" style="user-select: none;">メインメニュー</span>
+                                    	-->
+                                    </div>
+                                </div>
+                                <div class="dijitTitlePaneContentOuter" role="presentation">
+                                    <div class="dijitReset" data-dojo-attach-point="wipeNode" role="presentation">
+                                        <div class="dijitTitlePaneContentInner" data-dojo-attach-point="containerNode" role="region" id="menuTitlePane1_pane" aria-hidden="false">
+                                            <a href="./index.html">メインメニュートップ</a><br>
+                                            <!--
+                                            <a href="JavaScript:void(0);" onclick="doMenu('/MENSRV0100002B');" class="LINKCOLOR" id="MB_R011N030" tabindex="50">残高照会</a><br>
+                                            -->
+                                            <a href="./meisai/mizuho_meisai.html">入出金明細照会</a><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/images/menu_border.gif" />
+                </div>
+                <div id="main">
+                    <div class="ErrorMessage errMenu" id="ErrorMessage"></div>
+                    <header class="ContentsTitle">
+                        <h1>
+                            入出金明細照会
+                        </h1>
+                        <nav><b>取引選択</b>&nbsp;&gt;&nbsp;照会結果</nav>
+                    </header>
+                    <article>
+                        <h2>口座選択</h2>
+                        <p>入出金明細照会を行う口座を選択してください。</p>
+                        <table class="single">
+                            <tbody>
+                                <tr>
+                                    <th class="wide">照会口座の選択</th>
+                                    <td>
+                                        <select name="lstAccSel" tabindex="110" id="lstAccSel">
+                                            <option value="0">大森支店 普通 1535219</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul>
+                            <li>※外貨普通預金のご照会は、平日の9:00～21:00となります。</li>
+                            <li>※外貨普通預金を新規口座開設した場合は、利用口座に登録されるまでに多少お時間がかかりますので、ご了承ください。</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>照会期間選択</h2>
+                        <p>照会期間を指定し、「照会」ボタンをクリックしてください。</p>
+                        <table class="single">
+                            <tbody>
+                                <tr>
+                                    <th class="wide">照会期間の選択</th>
+                                    <td class="Radio">
+                                        <div class="inp"><input type="radio" name="rdoInqMtdSpec" value="1" checked="" tabindex="120" id="rdoInqMtdSpec"></div>
+                                        <div class="lbl pd">
+                                            <select name="lstTargetMnthSel" tabindex="130" id="lstTargetMnthSel">
+                                                <option value="THIS_MONTH">当月</option>
+                                                <option value="PREV_MONTH">前月以降</option>
+                                                <option value="BEFORE_LASTMONTH">前々月以降</option>
+                                                <option value="NO_WRITE">通帳未記帳分</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>または</p>
+                        <table class="single">
+                            <tbody>
+                                <tr>
+                                    <th class="wide">日付指定</th>
+                                    <td class="Radio">
+                                        <div class="inp"><input type="radio" name="rdoInqMtdSpec" value="2" tabindex="120" id="rdoInqMtdSpec"></div>
+                                        <div class="lbl pd">
+                                            <select name="lstDateFrmYear" tabindex="140" id="lstDateFrmYear">
+                                                <option value="2023" selected="">2023</option>
+                                            </select>年
+                                            <select name="lstDateFrmMnth" tabindex="150" id="lstDateFrmMnth">
+                                                <option value="9" selected="">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                            </select>月
+                                            <select name="lstDateFrmDay" tabindex="160" id="lstDateFrmDay">
+                                                <option value="1" selected="">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>日&nbsp;から&nbsp;
+                                            <select name="lstDateToYear" tabindex="170" id="lstDateToYear">
+                                                <option value="2023" selected="">2023</option>
+                                            </select>年
+                                            <select name="lstDateToMnth" tabindex="180" id="lstDateToMnth">
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11" selected="">11</option>
+                                            </select>月
+                                            <select name="lstDateToDay" tabindex="190" id="lstDateToDay">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13" selected="">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>日まで
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul>
+                            <li>※日付指定は、前々月1日以降から当日までをご指定いただけます。</li>
+                        </ul>
+                    </article>
+                    <section class="CenterBlock">
+                        <input type="button" value="照会" tabindex="200" class="semi-short">
+                    </section>
+                </div>
+            </div>
+        </div>
+        </section>
+</body>
+</html>

@@ -1,0 +1,2187 @@
+@charset "Shift_JIS";
+
+/* =========================== Apply Styles ================================= */
+/* --------------------------- Base Design ---------------------------------- */
+table {
+    width: 100%;
+    margin: 0px 0px 5px;
+    border-bottom: solid 1px #7a6aa9;
+}
+
+    table.single {
+        width: 700px;
+    }
+
+    table .sub {
+        text-indent: 12px;
+    }
+
+tr.e {
+    background-color: #e6dfee;
+}
+
+th, td {
+    border-top: solid 1px #7a6aa9;
+    border-left: solid 1px #7a6aa9;
+    border-right: solid 1px #7a6aa9;
+    font-size: 9pt;
+    line-height: 1.1em;
+    text-align: left;
+    padding: 2px 5px;
+}
+
+th {
+    background-color: #c5bbd8;
+    color: #000;
+}
+
+    th.ctr {
+        text-align: center;
+    }
+
+    th.rgt {
+        text-align: right;
+    }
+
+    th.lft {
+        text-align: left;
+    }
+
+td {
+    padding-bottom: 2px;
+}
+
+    td.ctr {
+        text-align: center;
+    }
+
+    td.rgt {
+        text-align: right;
+    }
+
+    td.lft {
+        text-align: left;
+    }
+
+    th.name, td.name {
+        text-indent: 3px;
+        padding-left: 5px;
+    }
+
+    th.solo, td.solo {
+        height: 20px;
+    }
+
+a:link, a:hover, a:visited {
+    color: #1c0c72;
+}
+
+a:active {
+    color: #7a6aa9;
+}
+
+input.shortest {
+    width: 70px;
+}
+
+input.short {
+    width: 100px;
+}
+
+input.semi-short {
+    width: 125px;
+}
+
+input.normal {
+    width: 150px;
+}
+
+input.semi-long {
+    width: 175px;
+}
+
+input.long {
+    width: 200px;
+}
+
+input.longest {
+    width: 300px;
+}
+/* 可変サイズボタン */
+/* 標準ボタンスタイルでキャプションがはみ出てしまう場合に限り使用 */
+input.width-auto {
+    width: auto;
+}
+
+b {
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+th.normal {
+    width: 120px;
+}
+
+th.wide {
+    width: 180px;
+}
+
+th.check, td.check {
+    width: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 60px;
+}
+
+select + p {
+    margin-top: 2px;
+}
+
+hr {
+    border-top: solid 1px #000066;
+    border-bottom: solid 1px #000066;
+    margin-bottom: 12px;
+}
+
+/* --------------------------- Area Layout ---------------------------------- */
+/* Whole Container */
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#container-narrow {
+    width: 550px;
+    margin: 0 auto;
+}
+
+/* Blanding Band */
+#blanding {
+    width: 960px;
+    height: 33px;
+    margin-bottom: 8pt;
+}
+/* Blanding Band (narrow) */
+#blanding-narrow {
+    margin: 0 auto 12px;
+    width: 520px;
+    height: 33px;
+  
+    text-align: right;
+    padding-right: 30px;
+}
+
+    #blanding-narrow a {
+        float: right;
+        margin: -15px 0 0 0;
+        padding-left: 15px;
+       
+    }
+
+    #blanding-narrow.printable {
+        margin-top: 24px;
+    }
+/* Bottom Band */
+#bottom {
+    width: 960px;
+}
+
+    #bottom .copyright {
+        width: 100%;
+        height: 17px;
+        text-align: center;
+        padding-top: 3px;
+        background-color: #1c0c72;
+        color: #c5bbd8;
+        font-size: 9pt;
+        line-height: 1.1em;
+    }
+
+        #bottom .copyright em {
+            font-size: 7pt;
+            line-height: 1.1em;
+            vertical-align: middle;
+        }
+
+    #bottom .link {
+        width: 100%;
+        height: 17px;
+        text-align: center;
+        padding-top: 2px;
+        background-color: #7b69ad;
+    }
+
+        #bottom .link li {
+            display: inline-block;
+            margin: auto 6px;
+            padding-left: 15px;
+            
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+
+        #bottom .link a {
+            color: #fff;
+        }
+/* Bottom Band (narrow) */
+#bottom-narrow {
+    margin: 0 auto;
+    width: 550px;
+}
+
+    #bottom-narrow .copyright {
+        width: 100%;
+        height: 17px;
+        text-align: center;
+        padding-top: 3px;
+        background-color: #1c0c72;
+        color: #c5bbd8;
+        font-size: 9pt;
+        line-height: 1.1em;
+    }
+
+    #bottom-narrow em {
+        font-size: 7pt;
+        line-height: 1.1em;
+        vertical-align: middle;
+    }
+/* Main Area Wrapper */
+#main-wrapper {
+    margin: 10px auto;
+    width: 100%;
+}
+
+    #main-wrapper.leftside {
+        background-image: url('../images/menu_border.gif');
+        background-position: top left;
+        background-repeat: repeat-y;
+    }
+
+    #main-wrapper.rightside {
+        background-image: url('../images/menu_border.gif');
+        background-position: top right;
+        background-repeat: repeat-y;
+    }
+
+/* Main Area */
+#main {
+    width: 760px;
+    float: left;
+    margin-left: 2px;
+}
+/* Main Area: clearfix */
+#main-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Simple Contents Area */
+#main-nomenu {
+    text-align: center;
+    margin: 0 auto;
+    width: 760px;
+}
+
+    #main-nomenu article {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    #main-nomenu p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    #main-nomenu th p, #main-nomenu td p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #main-nomenu section {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    #main-nomenu nav {
+        margin-bottom: 12px;
+    }
+
+        #main-nomenu nav p {
+            margin-bottom: 0px;
+        }
+
+/* Simple Contents Area (narrow) */
+#main-nomenu-narrow {
+    text-align: center;
+    margin: 0 auto;
+    width: 550px;
+}
+/* -------------------------- Block Layouts --------------------------------- */
+/* Color Box Blocks */
+.BoxBlock {
+    margin: 0 auto;
+    width: 530px;
+}
+
+    .BoxBlock .title {
+        background-color: #f70000;
+        color: #fff;
+        font-size: 9pt;
+        line-height: 1.1em;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .BoxBlock .detail {
+        background-color: #f5b39c;
+        color: #000;
+        font-size: 9pt;
+        line-height: 1.1em;
+        padding: 5px;
+    }
+
+    .BoxBlock .additional {
+        background-color: inherit;
+        color: inherit;
+        padding-top: 5px;
+        padding-bottom: 1px;
+    }
+
+        .BoxBlock .additional ul {
+            text-align: left;
+        }
+
+        .BoxBlock .additional li {
+            margin-left: 12px;
+            margin-bottom: 4px;
+            text-indent: -1em;
+        }
+
+    .BoxBlock .alt {
+        background-color: #C5BBD8;
+    }
+
+        .BoxBlock .alt .image {
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+
+        .BoxBlock .alt .name {
+            margin-top: 0;
+        }
+
+    .BoxBlock .lft {
+        text-align: left;
+    }
+
+    .BoxBlock .simple {
+        background-color: #cff;
+        color: #000;
+        font-size: 9pt;
+        line-height: 1.1em;
+        padding: 20px 5px;
+    }
+
+    .BoxBlock .question .name, .BoxBlock .answer .name {
+        display: table-cell;
+        text-align: right;
+        width: 140px;
+    }
+
+    .BoxBlock .question .name, .BoxBlock .question .value {
+        vertical-align: top;
+    }
+
+    .BoxBlock .answer .name, .BoxBlock .answer .value {
+        vertical-align: middle;
+    }
+
+    .BoxBlock .question, .BoxBlock .answer {
+        margin-top: 4px;
+    }
+
+        .BoxBlock .question .value, .BoxBlock .answer .value {
+            display: table-cell;
+            text-align: left;
+            width: 380px;
+        }
+
+            .BoxBlock .answer .value input {
+                width: 250px;
+            }
+
+    .BoxBlock.Kiyaku {
+        width: 540px;
+    }
+
+        .BoxBlock.Kiyaku .additional p {
+            text-align: right;
+        }
+
+    .BoxBlock.Kiyaku {
+        width: 540px;
+    }
+
+        .BoxBlock.Kiyaku select {
+            width: 540px;
+        }
+
+/* Double Column Block */
+.Double {
+    width: 760px;
+    text-align: left;
+}
+
+    .Double:after {
+        content: ".";
+        display: block;
+        height: 0px;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .Double .left-column {
+        float: left;
+        width: 365px;
+        padding-right: 15px;
+    }
+
+    .Double .right-column {
+        float: right;
+        width: 365px;
+        padding-left: 15px;
+    }
+
+    .Double th {
+        width: 120px;
+    }
+
+        .Double th.wide {
+            width: 160px;
+        }
+
+/* Center Position Block */
+.CenterBlock {
+    width: 100%;
+    text-align: center;
+}
+
+    .CenterBlock input[type="button"] {
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    .CenterBlock input[type="submit"] {
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+/* Center Position Block (Narrow) */
+.CenterBlock-narrow {
+    margin: 0 85px 0;
+    width: 380px;
+    text-align: left;
+}
+
+    .CenterBlock-narrow article {
+        margin-top: 12px;
+    }
+
+    .CenterBlock-narrow nav {
+        padding-top: 12px;
+    }
+
+/* Article Block */
+article h2, article h3 {
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-indent: -1em;
+    margin-left: 1em;
+    text-align: left;
+}
+
+article h3 {
+    margin-top: 10px;
+}
+
+article h2:before {
+    content: "■";
+    color: #000;
+}
+
+article h3:before {
+    content: "・";
+    color: #000;
+}
+
+article nav {
+    margin: 2px auto;
+}
+
+article ul, footer ul, article dl, footer dl {
+    margin-left: 1.0em;
+}
+
+article li, footer li, article dt, footer dt {
+    margin-bottom: 4px;
+    text-indent: -1em;
+}
+
+article p, article dd, footer dd {
+    margin-bottom: 4px;
+}
+
+article th p, article td p {
+    margin-bottom: 0;
+}
+
+article th li, article td li {
+    margin-bottom: 0;
+}
+
+    article th li + li, article td li + li {
+        margin-top: 4px;
+    }
+
+article h6 {
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-indent: -1em;
+    margin-left: 1em;
+}
+
+#main article {
+    margin-bottom: 12px;
+}
+
+#main section {
+    margin-bottom: 12px;
+}
+
+#main nav {
+    margin-bottom: 12px;
+}
+
+
+.ImageDescription {
+    width: 365px;
+    text-align: left;
+    display: table;
+}
+
+    .ImageDescription .image {
+        width: 175px;
+        padding-right: 5px;
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .ImageDescription .description {
+        width: 180px;
+        padding-left: 5px;
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .ImageDescription.PasswordCard .image {
+        width: 96px;
+        padding-right: 0;
+        vertical-align: top;
+    }
+
+    .ImageDescription.PasswordCard .description {
+        width: 259px;
+        padding-left: 10px;
+        vertical-align: top;
+    }
+
+.PasswordCard ul.usage {
+    margin-left: 1.3em;
+}
+
+    .PasswordCard ul.usage > li {
+        text-indent: -1.3em;
+    }
+
+.ImageDescription.PasswordApl {
+    width: 358px;
+    padding-left: 7px;
+    margin-bottom: 4px
+}
+
+    .ImageDescription.PasswordApl .image {
+        width: 64px;
+        padding-right: 0;
+        vertical-align: top;
+    }
+
+    .ImageDescription.PasswordApl .description {
+        width: 287px;
+        padding-left: 7px;
+        vertical-align: top;
+    }
+
+.PasswordApl ul.usage {
+    margin-left: 1.3em;
+}
+
+    .PasswordApl ul.usage > li {
+        text-indent: -1.3em;
+    }
+
+/* BorderTheme */
+nav.BorderTheme {
+    width: 680px;
+    margin: auto;
+}
+
+    nav.BorderTheme p {
+        margin-bottom: 3px;
+    }
+
+article.BorderTheme {
+    width: 680px;
+    margin: 24px auto 0 auto;
+}
+
+.BorderTheme h1 {
+    margin-bottom: 12px;
+    padding: 10px 0px 10px 25px;
+    border-bottom: 1px solid #cccccc;
+    background-image: url("../images/border_theme.gif");
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+
+.BorderTheme .scrollArea {
+    width: 654px;
+    height: 150px;
+    overflow-y: scroll;
+    border: solid 1px #666666;
+    padding: 12px;
+}
+
+    .BorderTheme .scrollArea p {
+        margin-bottom: 3px;
+    }
+
+.BorderTheme .attentionArea {
+    border: solid 1px #550a87;
+    background-color: #d6c3e7;
+    margin: 10px auto;
+    padding: 3px 8px;
+}
+
+    .BorderTheme .attentionArea p {
+        margin: 15px 40px 10px 24px;
+    }
+
+.BorderTheme ul li:before {
+    content: "○";
+}
+
+.BorderTheme ol li {
+    list-style-position: inside;
+    text-indent: -1.5em;
+    margin-left: 1.5em;
+}
+
+.Border-CenterBlock {
+    margin: 30px 0;
+}
+
+.BorderTheme select {
+    width: 680px;
+    margin-top: 5px;
+}
+
+/* ------------------------------ Components -------------------------------- */
+/* Contents Title */
+.ContentsTitle {
+    margin-top: 0px;
+    width: 760px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+    .ContentsTitle h1 {
+        width: 760px;
+        height: 21px;
+        font-size: 14pt;
+        line-height: 1.1em;
+        font-weight: bold;
+        text-align: left;
+        position: relative;
+        top: 11px;
+    }
+
+    .ContentsTitle nav {
+        width: 760px;
+        height: 17px;
+        text-align: right;
+        position: relative;
+        top: -6px;
+        border-bottom: solid 3px #000063;
+        margin-bottom: 12px;
+    }
+
+    .ContentsTitle aside {
+        float: right;
+        margin: -15px 3px 0 0;
+        padding-left: 13px;
+        display: block;
+        background: url('../images/help.gif') no-repeat;
+    }
+
+    .ContentsTitle .Nav {
+        width: 760px;
+        height: 17px;
+        text-align: right;
+        position: relative;
+        top: -6px;
+        border-bottom: solid 3px #000063;
+        margin-bottom: 12px;
+    }
+
+    .ContentsTitle .Aside {
+        float: right;
+        margin: -15px 3px 0 0;
+        padding-left: 13px;
+        display: block;
+        background: url('../images/help.gif') no-repeat;
+    }
+
+    .ContentsTitle .NavAlt {
+        margin-top: 14px;
+    }
+
+        .ContentsTitle .NavAlt p {
+            display: table-cell;
+            vertical-align: bottom;
+            text-align: right;
+            width: 760px;
+            height: 14px;
+            padding-left: 160px;
+        }
+
+        .ContentsTitle .NavAlt + h1 {
+            margin-top: -28px;
+        }
+
+    .ContentsTitle:after {
+        content: ".";
+        display: block;
+        height: 0px;
+        clear: both;
+        visibility: hidden;
+    }
+/* Contents Title (narrow) */
+.ContentsTitle-narrow {
+    width: 550px;
+    position: relative;
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+
+    .ContentsTitle-narrow h1 {
+        width: 550px;
+        font-size: 14pt;
+        line-height: 1.1em;
+        font-weight: bold;
+        text-align: left;
+        position: relative;
+        height: 21px;
+        top: 11px;
+    }
+
+    .ContentsTitle-narrow nav {
+        width: 550px;
+        height: 17px;
+        text-align: right;
+        position: relative;
+        top: -6px;
+        margin-bottom: 12px;
+        border-bottom: solid 3px #000063;
+    }
+
+    .ContentsTitle-narrow:after {
+        content: ".";
+        display: block;
+        height: 0px;
+        clear: both;
+        visibility: hidden;
+    }
+
+/* Helpdesk Banner */
+.Helpdesk {
+    width: 360px;
+    border-top: solid 1px #d6cfe7;
+    border-bottom: solid 1px #d6cfe7;
+}
+
+    .Helpdesk .title {
+        font-size: 1pt;
+        line-height: 1.1em;
+        border-bottom: solid 1px #d6cfe7;
+    }
+
+    .Helpdesk .phone {
+        font-size: 1pt;
+        line-height: 1.1em;
+        margin: 4px 0;
+    }
+
+    .Helpdesk .mobile em {
+        color: #f70000;
+        font-weight: bold;
+    }
+
+    .Helpdesk .link {
+        padding-top: 4px;
+        font-weight: bold;
+    }
+
+footer .Helpdesk {
+    margin: 0 auto;
+}
+/* Footer Link */
+.FooterLink {
+    width: 100%;
+    background-color: #7b69ad;
+}
+
+/* お客様番号入力 */
+.UserIdForm .detail p {
+    margin-bottom: 10px;
+}
+
+    .UserIdForm .detail p input {
+        margin-left: 12px;
+    }
+
+    .UserIdForm .detail p a,
+    .UserIdForm .detail p em {
+        font-weight: bold;
+        color: #ff0000;
+    }
+
+.UserIdForm ul.card-link {
+    text-align: left;
+    display: inline-block;
+    float: right;
+}
+
+    .UserIdForm ul.card-link li:nth-of-type(1) {
+        margin-bottom: 10px;
+    }
+
+.card-pass-links::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.card-pass-links {
+    width: 471px;
+    margin: 10px auto 10px auto;
+}
+
+.UserIdForm .privacy {
+    width: 471px;
+    margin: 15px auto 10px auto;
+    text-align: left;
+}
+
+    .UserIdForm .privacy h6 {
+        font-weight: bold;
+    }
+
+    .UserIdForm .privacy p {
+        text-indent: 1em;
+        font-weight: bold;
+    }
+
+    .UserIdForm .privacy select {
+        width: 100%;
+    }
+/* ログインパスワード入力 */
+.LoginForm .image {
+    margin-bottom: -12px;
+}
+
+    .LoginForm .image .name {
+        width: 193px;
+        float: left;
+        text-align: right;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .LoginForm .image .value {
+        text-align: left;
+        float: left;
+        margin-left: 10px;
+        border: 4px solid #000063;
+    }
+
+        .LoginForm .image .value img {
+            display: block;
+            margin: 2px;
+            border: 1px solid #000000;
+        }
+
+.LoginForm .number .name,
+.LoginForm .password .name {
+    float: left;
+    width: 140px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.LoginForm .password .name {
+    padding-top: 4px;
+}
+
+.LoginForm .number .value,
+.LoginForm .password .value {
+    float: right;
+    width: 350px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.LoginForm .link ul {
+    float: right;
+    width: 350px;
+    text-align: left;
+}
+
+.LoginForm .button input {
+    margin: 0 20px;
+}
+
+.LoginForm .number {
+    margin-top: 16px;
+}
+
+.LoginForm .password {
+    margin-top: 8px;
+}
+
+.LoginForm .link li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.LoginForm .button {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+/* パスワード登録 */
+#main-nomenu .RegisterPassword td.loginpass p {
+    margin-top: 3px;
+}
+
+.RegisterPassword td.loginpass input {
+    margin-top: 3px;
+    width: 335px;
+}
+
+.RegisterPassword td.loginpass p + input {
+    margin-top: 0;
+}
+
+.RegisterPassword td.loginpass input + ul {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.RegisterPassword td.mail input {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 335px;
+}
+
+.RegisterPassword td.mail p + input {
+    margin-top: 0;
+}
+
+#main-nomenu .RegisterPassword td.mail p {
+    margin-top: 3px;
+}
+
+.RegisterPassword td.firstpass input {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 80px;
+}
+
+.RegisterPassword td.temppass input {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 90px;
+}
+
+#main-nomenu .RegisterPassword td.SecondPasscode p {
+    margin-top: 3px;
+}
+
+.RegisterPassword td.SecondPasscode input {
+    margin-bottom: 3px;
+}
+
+.RegisterPassword td.Password input {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+/* 合言葉入力フォーム */
+.CqForm .additional p {
+    font-weight: bold;
+    text-align: right;
+}
+
+    .CqForm .additional p a {
+        font-weight: normal;
+    }
+
+.CqForm .button {
+    margin-top: 8px;
+}
+
+    .CqForm .button input {
+        margin: 0 25px;
+    }
+
+.CqForm nav {
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px
+}
+
+/* パソコン登録フォーム */
+.PcCheck {
+    width: 760px;
+    margin: 0 auto;
+}
+
+    .PcCheck h6, .PcCheck p {
+        text-align: left;
+        margin-left: 30px;
+        margin-right: 30px
+    }
+
+    .PcCheck table {
+        width: 410px;
+        margin: 15px auto 30px auto;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .PcCheck td {
+        border: solid #000 1px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+        .PcCheck td.check {
+            width: 20px;
+            max-width: 20px;
+            min-width: 20px;
+        }
+
+/* ボタン：縦表示 */
+.ButtonHorizontal {
+    width: 100%;
+}
+
+    .ButtonHorizontal input {
+        display: block;
+        width: 140px;
+        margin: 0 auto 4px 0;
+    }
+
+        .ButtonHorizontal input.longest {
+            width: 230px;
+        }
+
+        .ButtonHorizontal input.long {
+            width: 200px;
+        }
+
+        .ButtonHorizontal input.semi-long {
+            width: 160px;
+        }
+
+    .ButtonHorizontal:after {
+        content: ".";
+        display: block;
+        height: 0px;
+        clear: both;
+        visibility: hidden;
+    }
+
+/* フリー検索 */
+.InitialSearch {
+    margin: 5px auto;
+    position: relative;
+}
+
+    .InitialSearch input[type="text"] {
+        width: 50px;
+    }
+
+    .InitialSearch input[type="button"] {
+        position: absolute;
+        left: 50%;
+    }
+
+/* テーブル（サブメニュー） */
+.SubMenu {
+    width: 700px;
+    margin: 0 auto;
+}
+
+    .SubMenu table {
+        width: 100%;
+        border: solid 2px #7a6aa9;
+    }
+
+        .SubMenu table + table {
+            margin-top: -7px;
+        }
+
+    .SubMenu th {
+        min-height: 39px;
+        height: 39px;
+        padding: 5px;
+        width: 240px;
+    }
+
+    .SubMenu .spaceline {
+        margin-top: 6px;
+    }
+
+    .SubMenu th a {
+        font-weight: bold;
+    }
+
+    .SubMenu td {
+        padding: 5px;
+    }
+
+        .SubMenu td p, .SubMenu th p,
+        .SubMenu td li, .SubMenu th li {
+            margin-bottom: 0;
+        }
+
+            .SubMenu td p + p, .SubMenu th p + p,
+            .SubMenu td li + li, .SubMenu th li + li,
+            .SubMenu td p + ul, .SubMenu th p + ul,
+            .SubMenu td ul + p, .SubMenu th ul + p {
+                margin-top: 3px;
+            }
+
+/* 各種ボタン長 */
+/* 振込名義人 */
+input.CustomerName {
+    width: 190px;
+}
+/* 受取人名 */
+input.BeneficiaryName {
+    width: 185px;
+}
+/* ニックネーム */
+input.NickName {
+    width: 90px;
+}
+/* 取引種類 */
+select.AccountType {
+    width: 80px;
+}
+/* 口座番号 */
+input.AccountNumber {
+    width: 80px;
+}
+/* 振込金額 */
+input.TransferAmount {
+    width: 75px;
+}
+
+/* 頭文字選択パレット */
+.SymbolPalette {
+    width: 365px;
+}
+
+    .SymbolPalette .kana,
+    .SymbolPalette .number {
+        width: 100%;
+        height: auto;
+    }
+
+    .SymbolPalette .number {
+        margin-top: 5px;
+    }
+
+    .SymbolPalette .k {
+        max-width: 28px;
+        width: 28px;
+        display: table-cell;
+        border: 1px solid #7a6aa9;
+        text-align: center;
+        vertical-align: middle;
+        padding: 1px 0;
+    }
+
+        .SymbolPalette .k input {
+            width: 24px;
+            padding: 0;
+            margin: 0;
+        }
+
+    .SymbolPalette .s {
+        max-width: 16px;
+        width: 16px;
+        display: table-cell;
+        border: 1px solid #7a6aa9;
+    }
+
+        .SymbolPalette .k + .k,
+        .SymbolPalette .s + .k,
+        .SymbolPalette .k + .s {
+            border-left: none;
+        }
+
+    .SymbolPalette .kana + .kana .k,
+    .SymbolPalette .kana + .kana .s {
+        border-top: none;
+    }
+
+/* 金融機関ボタン */
+.BankButtons .btn {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* 第2暗証番号 */
+.SecondPasscode {
+    text-align: left;
+}
+
+    .SecondPasscode input {
+        vertical-align: 0px;
+        margin-right: 7px;
+        width: 15px;
+    }
+
+        .SecondPasscode input + input {
+            margin-left: 7px;
+        }
+
+    .SecondPasscode em {
+        font-weight: bold;
+        color: #F00000;
+    }
+
+/* 申し込みルール記述 */
+ul.RuleDescription {
+    margin-left: 5px;
+}
+
+    ul.RuleDescription li {
+        text-indent: -6px;
+        margin-top: 6px;
+        margin-bottom: 12px;
+    }
+
+        ul.RuleDescription li p {
+            margin-top: -12px;
+            margin-bottom: 12px;
+            padding-left: 6px;
+        }
+
+        ul.RuleDescription li:before {
+            content: "・";
+            color: #000;
+        }
+
+/* 電話番号（一括入力） */
+.PhoneNumber input {
+    width: 90px;
+    margin-right: 5px;
+}
+/* 電話番号（3分割入力） */
+.Phone input {
+    width: 35px;
+    margin-right: 5px;
+}
+
+    .Phone input + input {
+        margin-left: 5px;
+    }
+
+/* ワンタイムパスワード */
+.Password input[type="password"] {
+    width: 100px;
+}
+
+/* トランザクション署名ワンタイムパスワード */
+.SignPassword input[type="password"] {
+    width: 140px;
+}
+
+/* ワンタイムパスワードカード番号表示テーブル */
+th.PasswordCardArea {
+    width: 130px;
+}
+
+/* ページトップに戻るリンク */
+.ToTop {
+    float: right;
+    padding-left: 9px;
+    background: url('../images/icn-arrow-top.gif') no-repeat;
+    background-position: 0px 4px;
+}
+
+/* ヘルプリンク */
+.HelpLink {
+    margin-top: 3px;
+}
+
+    .HelpLink a {
+        padding-left: 13px;
+        background: url('../images/help.gif') no-repeat;
+    }
+
+/* 完了画面用 */
+.ResultsForm {
+    margin: 0 auto;
+    width: 530px;
+}
+
+    .ResultsForm hr {
+        border-top: solid 1px #7a6aa9;
+        border-bottom: solid 1px #7a6aa9;
+        margin-top: 20px;
+    }
+
+    .ResultsForm p {
+        padding-top: 20px;
+    }
+
+    .ResultsForm .number {
+        margin-top: 33px;
+    }
+
+    .ResultsForm .mail {
+        margin-top: 21px;
+    }
+
+    .ResultsForm .name {
+        text-align: left;
+        display: table-cell;
+        width: 180px;
+        padding: 3px 0;
+        vertical-align: middle;
+    }
+
+    .ResultsForm .value {
+        display: table-cell;
+        width: 350px;
+        background-color: #c5bbd8;
+        font-weight: bold;
+        padding: 2px 0;
+        vertical-align: middle;
+    }
+
+article.SameLine {
+    position: relative;
+}
+
+    article.SameLine p {
+        position: absolute;
+        top: 0;
+        left: 85px;
+    }
+
+/* ダウンロード画面用 */
+.DownloadForm {
+    margin: 0 auto;
+    width: 530px;
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 1.1em;
+    color: #1C0C72;
+    padding-bottom: 10px;
+}
+
+    .DownloadForm p {
+        background: url('../images/line05.gif') no-repeat;
+    }
+
+    .DownloadForm .title {
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .DownloadForm .link {
+        margin-top: 15px;
+        padding-bottom: 20px;
+        background-position: 0px 32px;
+    }
+
+/* エラー画面用：メッセージタイトル */
+.MsgTitle {
+    font-weight: bold;
+    font-size: 14pt;
+    line-height: 1.1em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* エラー画面用：メッセージコンテンツ */
+.MessageForm {
+    margin: 0 auto;
+    width: 720px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+    .MessageForm .mark {
+        color: #1c0c72;
+    }
+
+    .MessageForm img {
+        margin-bottom: -10px;
+    }
+
+    .MessageForm hr {
+        width: 650px;
+        margin: 18px auto;
+        border-top: solid 1px #007BBB;
+        border-bottom: solid 1px #007BBB;
+    }
+
+    .MessageForm header {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-size: 12pt;
+        line-height: 1.1em;
+    }
+
+    .MessageForm article {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-size: 12pt;
+        line-height: 1.1em;
+    }
+
+    .MessageForm footer {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-size: 9pt;
+        line-height: 1.1em;
+    }
+
+    .MessageForm .left-column, .MessageForm .right-column {
+        border: solid 1px #000000;
+    }
+
+    .MessageForm .left-column {
+        float: left;
+        width: 310px;
+        margin-left: 40px;
+    }
+
+    .MessageForm .right-column {
+        float: right;
+        width: 310px;
+        margin-right: 40px;
+    }
+
+        .MessageForm .left-column header,
+        .MessageForm .left-column article,
+        .MessageForm .left-column footer,
+        .MessageForm .right-column header,
+        .MessageForm .right-column article,
+        .MessageForm .right-column footer {
+            font-size: 10pt;
+            line-height: 1.1em;
+        }
+
+    .MessageForm .detail {
+        height: 110px;
+    }
+
+    .MessageForm .title {
+        font-size: 12pt;
+        line-height: 1.1em;
+    }
+
+    .MessageForm .errorMsg {
+        padding-left: 36px;
+        padding-right: 36px;
+        font-size: 14pt;
+        line-height: 1.1em;
+        color: #F00000;
+    }
+
+    .MessageForm .errorCd {
+        font-size: 9pt;
+        line-height: 1.1em;
+        color: #000000;
+        margin-bottom: -10px;
+    }
+
+    .MessageForm .time {
+        font-size: 11pt;
+        line-height: 1.1em;
+    }
+
+        .MessageForm .time p {
+            color: #F00000;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .MessageForm .time ul {
+            text-align: left;
+            margin-left: 155px;
+        }
+
+/* 注意事項 */
+.Attention {
+    margin: 0 auto;
+    width: 630px;
+    text-align: left;
+}
+
+    .Attention h6 {
+        color: #F00000;
+    }
+
+    .Attention ul {
+        border: solid 1px #7a6aa9;
+        background-color: #c5bbd8;
+        margin-bottom: 12px;
+        padding: 5px 10px;
+    }
+
+/* 左寄せブロック */
+.LeftBlock {
+    text-align: left;
+    width: 100%;
+}
+
+/* 前回ログイン情報 */
+.LoginInfo {
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+    .LoginInfo .name {
+        float: left;
+        width: 120px;
+        padding-left: 15px;
+    }
+
+    .LoginInfo .value {
+        float: left;
+        text-align: left;
+        min-width: 120px;
+        padding-left: 24px;
+    }
+
+    .LoginInfo .link {
+        float: left;
+        text-align: left;
+        width: 120px;
+        padding-left: 24px;
+    }
+
+/* 注意文言表示 */
+.AttentionBox {
+    margin: 0 auto;
+    width: 620px;
+    text-align: center;
+    font-size: 11pt;
+    line-height: 1.1em;
+    font-weight: bold;
+    background: #F8CCBB;
+    border: solid 2px #F17F66;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* 画面全体メッセージ */
+.MessageArea {
+    margin: 0 auto;
+    width: 720px;
+    background: #CCFFFF;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 6px;
+    padding-bottom: 12px;
+}
+
+    .MessageArea article, .MessageArea footer {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+
+/* ペイジー税金料金払込トップ */
+.Entrance {
+    padding-top: 12px;
+    border: solid 1px #000000;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+    .Entrance p {
+        font-weight: bold;
+        font-size: 11pt;
+        line-height: 1.1em;
+        text-align: left;
+        padding-left: 12px;
+    }
+
+    .Entrance .imgLink {
+        margin-top: 12px;
+        margin-bottom: 24px;
+    }
+
+/* ログイン画像枠 */
+.PictureBlock {
+    margin: 0 auto;
+    width: 720px;
+}
+/* ログイン画像一覧 */
+.PictureArea {
+    margin: 0 auto;
+    width: 100%;
+    background: #CCFFFF;
+    margin-bottom: 12px;
+    padding-bottom: 15px;
+}
+
+    .PictureArea .detail {
+        width: 580px;
+        margin: 0 auto;
+        padding-top: 21px;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+
+        .PictureArea .detail .value {
+            display: inline-block;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .PictureArea .detail img {
+            width: 100px;
+            border: solid 1px #000000;
+            display: block;
+        }
+
+        .PictureArea .detail input {
+            margin: 5px auto 0 auto;
+            display: block;
+        }
+
+/* 合言葉質問と答え */
+.QuestionBlock {
+    margin: 0 auto;
+    width: 720px;
+}
+
+    .QuestionBlock .detail {
+        margin: 0 auto 12px auto;
+        background: #ccffff;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .QuestionBlock .wrap {
+        margin: 20px auto;
+        width: 480px;
+    }
+
+        .QuestionBlock .wrap .content {
+            display: table-cell;
+        }
+
+        .QuestionBlock .wrap .check {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+    .QuestionBlock .content {
+        width: 440px;
+        margin: 20px auto;
+    }
+
+    .QuestionBlock .question, .QuestionBlock .answer {
+        line-height: 21px;
+    }
+
+        .QuestionBlock .question .name, .QuestionBlock .answer .name {
+            float: left;
+            text-align: right;
+            width: 60px;
+        }
+
+        .QuestionBlock .question .value, .QuestionBlock .answer .value {
+            float: right;
+            text-align: left;
+            width: 380px;
+        }
+
+            .QuestionBlock .answer .value input {
+                width: 160px;
+            }
+
+/* 第一暗証番号 */
+.FirstPasscode input {
+    width: 70px;
+}
+
+/* OneToOneメッセージ */
+.OneToOne {
+    min-height: 80px;
+    border: 1px solid #7a6aa9;
+    padding: 3px 5px;
+    word-break: break-all;
+}
+
+    .OneToOne h4 {
+        line-height: 1.3em;
+        font-weight: bold;
+        font-size: 12pt;
+        line-height: 1.1em;
+        margin-bottom: 4px;
+        margin-top: 2px;
+        margin-left: 2px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .OneToOne p.term {
+        display: inline;
+        font-weight: bold;
+    }
+
+    .OneToOne .banner {
+        display: table-cell;
+        padding-left: 5px;
+        padding-right: 10px;
+        max-width: 500px;
+        overflow: hidden;
+    }
+
+    .OneToOne .contents {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+        .OneToOne .contents p.link {
+            margin-top: 8px;
+        }
+
+/* 新着アイコン */
+.NewIcon a {
+    line-height: 18px;
+}
+
+.NewIcon img {
+    display: block;
+    float: left;
+}
+
+/* ログインパスワード */
+.LoginPassword {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    .LoginPassword .name {
+        float: left;
+        text-align: left;
+        width: 300px;
+        margin-left: 70px;
+        line-height: 23px;
+    }
+
+    .LoginPassword .value {
+        float: right;
+        text-align: left;
+        width: 350px;
+    }
+
+        .LoginPassword .value div {
+            margin-bottom: 3px;
+        }
+
+    .LoginPassword input {
+        width: 290px;
+    }
+
+/* 緊急告知エリア枠 */
+.ImportantMessage {
+    border: 1px solid #7a6aa9;
+    padding: 3px 5px;
+    min-height: 45px;
+}
+
+
+/* 枠なし入力欄 */
+#main article.RegisterForm {
+    margin-bottom: 25px;
+}
+
+.RegisterForm {
+    margin-top: 30px;
+    width: 760px;
+}
+
+    .RegisterForm .detail {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+        margin-left: 25px;
+        width: 710px;
+    }
+
+        .RegisterForm .detail .name {
+            min-height: 30px;
+            width: 220px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .RegisterForm .detail .value {
+            min-height: 30px;
+            width: 490px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+            .RegisterForm .detail .value .money {
+                width: 40px;
+                margin-right: 5px;
+            }
+
+            .RegisterForm .detail .value .mail {
+                width: 380px;
+                margin-right: 5px;
+            }
+
+/* ペイジーマーク */
+.Pay-easy {
+    height: 45px;
+    background-image: url('../images/pay_easy.gif');
+    background-repeat: no-repeat;
+}
+
+    .Pay-easy p {
+        margin-left: 70px;
+    }
+
+    .Pay-easy div {
+        padding-top: 11px;
+    }
+
+    .Pay-easy .note {
+        padding-top: 4px;
+    }
+
+/* 支店名変更対応表 */
+.BranchNameExt {
+    margin-left: 30px;
+    width: 270px;
+    border: none;
+}
+
+    .BranchNameExt th, .BranchNameExt td {
+        border: none;
+        background-color: #fff;
+        padding: 0;
+    }
+
+        .BranchNameExt th.org, .BranchNameExt th.new {
+            max-width: 120px;
+            min-width: 120px;
+            width: 120px;
+        }
+
+        .BranchNameExt th.anchor {
+            max-width: 30px;
+            min-width: 30px;
+            width: 30px;
+        }
+
+/* エラーメッセージ */
+.ErrorMessage {
+    color: #f00000;
+    text-align: center;
+    line-height: 1.1em;
+}
+
+    .ErrorMessage img {
+        vertical-align: -2px;
+        margin-right: 2px;
+    }
+
+    .ErrorMessage.errMenu {
+        position: relative;
+        top: 12px;
+    }
+
+/* サブ項目テーブル */
+table.SubSection {
+    border-bottom: solid 1px #7a6aa9;
+}
+
+    table.SubSection th {
+        border-bottom: 0px;
+    }
+
+        table.SubSection th.child {
+            width: 10px;
+            border-top: 0px;
+        }
+
+            table.SubSection th.child + th {
+                width: 99px;
+            }
+
+.AnswerBlock {
+    margin: 15px auto;
+    padding: 8px 0 6px;
+    width: 600px;
+    background-color: #ffcc99;
+    position: relative;
+}
+
+    .AnswerBlock .img {
+        width: 100%;
+    }
+
+        .AnswerBlock .img img {
+            border: solid 1px #000000;
+        }
+
+    .AnswerBlock .imgLink {
+        position: absolute;
+        top: 52px;
+        left: 480px;
+        height: auto;
+        width: 90px;
+        display: table-cell;
+        vertical-align: bottom;
+        text-align: left;
+    }
+
+    .AnswerBlock .detail {
+        display: table-cell;
+        vertical-align: middle;
+        width: 480px;
+    }
+
+        .AnswerBlock .detail .name {
+            display: table-cell;
+            width: 80px;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .AnswerBlock .detail .value {
+            display: table-cell;
+            width: 380px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .AnswerBlock .detail .answer {
+            margin-top: 3px;
+        }
+
+    .AnswerBlock .link {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        width: 120px;
+    }
+
+/* ラジオボタンの調整 */
+ul.Radio {
+    margin-left: 0;
+}
+
+    ul.Radio li {
+        text-indent: 0;
+        margin-bottom: 0;
+    }
+
+        ul.Radio li + li {
+            margin-top: 0;
+        }
+
+.Radio .inp {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+    .Radio .inp input[type="radio"] {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+.Radio .lbl {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.Radio .whole {
+    display: inline-block;
+}
+
+th.Radio .lbl, td.Radio .lbl, .Radio .lbl.pd {
+    padding-top: 0;
+}
+
+/* チェックボックスの調整 */
+ul.CheckBox {
+    margin-left: 0;
+}
+
+    ul.CheckBox li {
+        text-indent: 0;
+        margin-bottom: 0;
+    }
+
+        ul.CheckBox li + li {
+            margin-top: 0;
+        }
+
+.CheckBox .inp {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+    .CheckBox .inp input[type="checkbox"] {
+        margin-left: 2px;
+        margin-right: 1px;
+    }
+
+.CheckBox .lbl {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+    th.CheckBox .lbl, td.CheckBox .lbl, .CheckBox .lbl.pd {
+        padding-top: 1px;
+    }
+
+/* メールOTP追加認証 登録メールアドレス */
+.MailOTP {
+    background: #F17F66;
+    border: solid 2px #F17F66;
+    margin-top: 24px;
+}
+
+    .MailOTP th {
+        width: 120px;
+        background: #F8CCBB;
+        font-weight: bold;
+        border: solid 2px #F17F66;
+    }
+
+    .MailOTP td {
+        background: #FFFFFF;
+        font-weight: bold;
+        border: solid 2px #F17F66;
+    }
+
+
+/* --------------------------- Support Selectors ---------------------------- */
+
+.help {
+    margin-top: 2px;
+    display: inline-block;
+    background: url('../images/help.gif') no-repeat;
+    padding-left: 13px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+.att {
+    font-weight: bold;
+    color: #F00000;
+}
+
+.subInstruct {
+    margin-left: 12px;
+}
+
+.brk {
+    word-break: break-all;
+}
+
+.instruct {
+    color: #F00000;
+}
+
+.sep {
+    margin-left: 36px;
+}
+
+.prompt {
+    font-weight: bold;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+p.timestamp {
+    margin-top: -17px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.subInstruct li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: -6px;
+    text-indent: -6px;
+}
