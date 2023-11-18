@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="Shift_JIS">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <meta name="description" content="sample text sample text sample text sample text sample text sample text ...">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/common2.css">
+    <link rel="stylesheet" href="../assets/css/res.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <section class="section">
+        <div id="container">
+            <div id="blanding">
+                <img src="../assets/images/brandingband.gif" />
+            </div>
+            <div id="main-wrapper" class="leftside">
+                <div id="side-menu">
+                    <div class="menu-header">
+                        <a href="/servlet/MENSRV0100901B.do?_FRAMEID=root&amp;_TARGETID=root&amp;_LUID=&amp;_TOKEN=1699889951464&amp;POSTKEY=202311140006183000005" tabindex="50">
+                        <!--
+                        <img src="images/logout108.gif" alt="ログアウト" height="20" width="108"></a>
+                    	-->
+                    </div>
+                    <div id="dispMenu" style="display: block;">
+                        <div class="PassBookLess">
+                            <ul>
+                                <!--
+                                <img src="images/passbookless.png" alt="通帳レス" height="35" width="180"></a></li>
+                                -->
+                            </ul>
+                        </div>
+                        <div class="mizuhomenu">
+                            <div class="OPENBKCOLOR dijitTitlePane" role="group" lang="ja" id="menuTitlePane1" widgetid="menuTitlePane1">
+                                <div data-dojo-attach-event="onclick:_onTitleClick, onkeypress:_onTitleKey" class="dijitTitlePaneTitle dijitFixedOpen" data-dojo-attach-point="titleBarNode">
+                                    <div class="dijitTitlePaneTitleFocus" data-dojo-attach-point="focusNode" role="heading" aria-pressed="true">
+                                     <!--
+                                        <img src="dojo/dojo/resources/blank.gif" alt="" data-dojo-attach-point="arrowNode" class="dijitArrowNode" role="presentation"><span data-dojo-attach-point="arrowNodeInner" class="dijitArrowNodeInner">-</span><span data-dojo-attach-point="titleNode" class="dijitTitlePaneTextNode" style="user-select: none;">メインメニュー</span>
+                                    -->
+                                    </div>
+                                </div>
+                                <div class="dijitTitlePaneContentOuter" data-dojo-attach-point="hideNode" role="presentation">
+                                    <div class="dijitReset" data-dojo-attach-point="wipeNode" role="presentation">
+                                        <div class="dijitTitlePaneContentInner" data-dojo-attach-point="containerNode" role="region" id="menuTitlePane1_pane" aria-hidden="false">
+                                            <a href="../index.html">メインメニュートップ</a><br>
+                                           <!--
+                                            <a href="JavaScript:void(0);" onclick="doMenu('/MENSRV0100002B');" class="LINKCOLOR" id="MB_R011N030" tabindex="50">残高照会</a><br>
+                                            -->
+                                            <a href="./mizuho_meisai.html">入出金明細照会</a><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                
+                    </div>
+                   
+                    
+                </div>
+                <div>
+                    <img src="../assets/images/menu_border.gif" />
+                </div>
+                <div id="main">
+                    <div class="ErrorMessage errMenu" id="ErrorMessage"></div>
+                    <header class="ContentsTitle">
+                        <h1>
+                            入出金明細照会
+                        </h1>
+                        <nav>取引選択&nbsp;&gt;&nbsp;<b>照会結果</b></nav>
+                    </header>
+                    <article>
+                        <h2>照会口座</h2>
+                        <div class="Double">
+                            <div class="left-column">
+                                <article>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>店名</th>
+                                                <td class="lft"><span id="txtBrnch">八重洲口支店</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>取引種類</th>
+                                                <td class="lft"><span id="txtTransType">普通</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>口座番号</th>
+                                                <td class="lft"><span id="txtAccNo">3064798</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>氏名</th>
+                                                <td class="lft"><span id="txtAccNo">ツノダ　アツヒロ</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>現在残高</th>
+
+
+                                                <td class="rgt"><span id="txtCrntBal">22,436&nbsp;円</span></td>
+
+                                            </tr>
+                                            <tr>
+                                                <th>お引出可能残高</th>
+
+
+                                                <td class="rgt"><span id="txtDrawUsblBal">22,436&nbsp;円</span></td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </article>
+                            </div>
+                           
+                        </div>
+                    </article>
+                    <article class="SameLine">
+                        <h2>入出金明細</h2>
+                        <p>&nbsp;</p>
+                        <table class="n04110-t2">
+                            <tbody>
+                                <tr>
+                                    <th class="c1 ctr">日付</th>
+                                    <th class="c2 ctr">お引出金額</th>
+                                    <th class="c2 ctr">お預入金額</th>
+                                    <th class="c3 ctr">お取引内容</th>
+                                </tr>
+                                
+       <!----------------------------------2023 4月--------------------------------------->
+                                 <tr class="e">
+
+                                    <td class="ctr"><span id="txtDate_007">2023.04.28</span></td>
+
+
+                                    <td class="rgt">20,000 円</td>
+                                    <td class="ctr">-</td>
+
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_007">ＡＴＭ（５４８）</span></td>
+                                </tr>
+                                <tr>
+
+                                    <td class="ctr"><span id="txtDate_000">2023.04.27</span></td>
+
+
+                                    <td class="rgt">9,900 円</td>
+                                    
+                                    <td class="ctr">-</td>
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_000">セントラルスポーツ（カ</span></td>
+                                </tr>
+                                
+                                <tr>
+
+                                    <td class="ctr"><span id="txtDate_000">2023.04.27</span></td>
+
+
+                                    <td class="rgt">71,050 円</td>
+                                    
+                                    <td class="ctr">-</td>
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_000">カ）エポスカード</span></td>
+                                </tr>
+                                <tr class="e">
+
+                                    <td class="ctr"><span id="txtDate_001">2023.04.25</span></td>
+
+                                    <td class="ctr">-</td>
+                                    <td class="rgt">240,022 円</td>
+
+
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_001">給与</span></td>
+                                </tr>
+                                 <tr class="e">
+
+                                    <td class="ctr"><span id="txtDate_007">2023.04.20</span></td>
+
+
+                                    <td class="rgt">10,000 円</td>
+                                    <td class="ctr">-</td>
+
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_007">ＡＴＭ（５４８）</span></td>
+                                </tr>
+                                 <tr class="e">
+
+                                    <td class="ctr"><span id="txtDate_007">2023.04.14</span></td>
+
+
+                                    <td class="rgt">15,000 円</td>
+                                    <td class="ctr">-</td>
+
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_007">ＡＴＭ（５４８）</span></td>
+                                </tr>
+                                 <tr class="e">
+
+                                    <td class="ctr"><span id="txtDate_007">2023.04.06</span></td>
+
+
+                                    <td class="rgt">50,000 円</td>
+                                    <td class="ctr">-</td>
+
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_007">ＡＴＭ（５４８）</span></td>
+                                </tr>
+                                 <tr>
+
+                                    <td class="ctr"><span id="txtDate_000">2023.04.03</span></td>
+
+
+                                    <td class="rgt">177,269 円</td>
+                                    
+                                    <td class="ctr">-</td>
+
+
+                                    <td class="lft brk"><span id="txtTransCntnt_000">ライフカード（カ</span></td>
+                                </tr>
+                                <tr>
+
+                                    <td class="ctr"><span id="txtDate_000">2023.04.03</span></td>
+
+                                    <td class="ctr">-</td>
+
+
+
+
+                                    <td class="rgt">80,544 円</td>
+
+                                    <td class="lft brk"><span id="txtTransCntnt_000">賞与</span></td>
+                                </tr>
+   
+                            </tbody>
+                        </table>
+                    </article>
+                    <section class="CenterBlock">
+					
+						
+						<input type="button" value="前の明細へ" onclick="location.href='./mizuho_meisai202303.html'" tabindex="120" class="short">
+					
+					
+					
+					
+					
+					
+						
+						<input type="button" value="次の明細へ" onclick="location.href='./mizuho_meisai202305.html'" tabindex="130" class="short">
+					
+				</section>
+                </div>
+            </div>
+            <div id="bottom">
+			<div class="copyright">Copyright&nbsp;<em>(c)</em>&nbsp;2023&nbsp;Mizuho&nbsp;Bank,&nbsp;Ltd.&nbsp;All&nbsp;Rights&nbsp;Reserved.</div>
+		</div>
+        </div>
+    </section>
+</body>
+</html>
